@@ -1,0 +1,470 @@
+/* Copy paste me to use in projects for easy preset CSS! */
+
+/* CSS Reset */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display: block;
+}
+
+nav ul {
+  list-style :none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input, select {
+  vertical-align :middle;
+}
+
+/* Typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Noto Sans', sans-serif;
+  cursor: default;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p, li, span, a, label, input, textarea {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.6rem;
+  color: #333333;
+}
+
+li {
+  list-style-position: inside;
+}
+
+/* Page Sections */
+
+.page-container {
+  width: 90%;
+  margin: auto;
+}
+
+/* Tablet & Laptop View */
+@media (min-width: 768px) {
+  .page-container {
+    width: 80%;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 1200px) {
+  .page-container {
+    max-width: 1200px;
+  }
+}
+
+article {
+  margin: 2.5rem 0;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: blue;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  color: lightskyblue;
+}
+
+/* Buttons */
+
+button {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0;
+  margin: 1rem 0;
+  width: fit-content;
+  background-color: gainsboro;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightskyblue;
+}
+
+/* Forms */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  border: 1px solid lightgrey;
+  padding: 0.5rem 1rem;
+  max-width: 400px;
+  margin: 0.5rem 0;
+}
+
+/* Nav Bar */
+
+nav {
+  width: 100%;
+  background-color: lightskyblue;
+}
+
+.nav-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#logo {
+  width: 5rem;
+  height: auto;
+}
+
+.nav-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.nav-links li {
+  margin: 0 1.5rem;
+  cursor: pointer;
+}
+
+/* UNDERNEATH HERE IS OPTIONAL */
+
+/* Hamburger Menu */
+
+.hamburger {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 100;
+  color: black;
+  padding: 0;
+}
+
+.hamburger:hover {
+  background: transparent;
+}
+
+.hamburger {
+  display: grid;
+}
+
+.menu-icon, .close-icon {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.hamburger-menu {
+  position: fixed;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: white;
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.hamburger-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 5rem;
+}
+
+.hamburger-menu li {
+  padding: 1rem;
+}
+
+.showMenu {
+  transform: translateX(0);
+}
+
+.hideOverflow {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.displayNone {
+  visibility: hidden;
+  display: none;
+}
+
+/* Back To Top Button */
+
+#back-to-top-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  display: none;
+}
+
+/* Add To Bag */
+.cart-container {
+  width: fit-content;
+  position: relative;
+}
+
+.cart-button {
+  border: none;
+  background: transparent;
+}
+
+.cart-button:hover {
+  background: transparent;
+}
+
+#counter-circle {
+  position: absolute;
+  left: 5rem;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+/* Call To Action Button Arrow */
+
+.cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta:hover {
+  padding-right: 3rem;
+}
+
+.cta i {
+  position: absolute;
+  margin-left: 1rem;
+  transform: translateX(-50%);
+  opacity: 0;
+  margin-top: 1px;
+  transition: 0.3s ease-in-out;
+}
+
+.cta:hover i {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta:active::before {
+  transform: scaleX(1);
+}
+
+/* Hover Underline Animation */
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  background-color: black;
+  height: 2px;
+  bottom: -0.5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/* ANIMATIONS */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+  opacity:0;
+  }
+  50%{
+  opacity:0.5;
+  }
+  100% {
+  opacity:1;
+  }
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+  0% {
+  opacity:1;
+  }
+  50%{
+  opacity:0.5;
+  }
+  100% {
+  opacity:0;
+  }
+}
+
+/* Scrolling Text */
+
+#scroll-container {
+  border: 1px solid lightgrey;
+  padding: 0.5rem 1rem;
+  overflow: hidden;
+}
+
+#scroll-text {
+  color: #333333;
+
+  /* Animation Properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: scrolling-text 20s linear infinite;
+  -webkit-animation: scrolling-text 20s linear infinite;
+  animation: scrolling-text 20s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes scrolling-text {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes scrolling-text {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes scrolling-text {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

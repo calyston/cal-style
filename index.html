@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="milkshake.png">
+  <link rel="stylesheet" href="calstyle.css">
+  <title>Cal Style</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <section class="nav-container">
+        <img id="logo" src="milkshake.png" alt="milkshake-logo">
+        <div class="nav-links">
+          <ul>
+            <li class="hover-underline-animation">These</li>
+            <li class="hover-underline-animation">Are</li>
+            <li class="hover-underline-animation">Nav</li>
+            <li class="hover-underline-animation">Links</li>
+          </ul>
+          <!-- Mobile Menu -->
+          <div class="hamburger-menu">
+            <ul>
+              <li>This</li>
+              <li>is a</li>
+              <li>hamburger</li>
+              <li>menu</li>
+            </ul>
+          </div>
+          <button class="hamburger">
+            <i class="menu-icon fas fa-bars fa-2x"></i>
+            <i class="close-icon fas fa-times fa-2x displayNone"></i>
+          </button>
+        </div>
+      </section>
+    </nav>
+  </header>
+
+  <div id="back-to-top-container">
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+  </div>
+  <div id="scroll-container">
+    <p id="scroll-text">♡ This is scrolling text! ♡</p>
+  </div>
+  <section class="page-container">
+
+    <!-- Typography -->
+    <article>
+      <h1>This is a H1 headline</h1>
+      <h2>This is a H2 headline</h2>
+      <h3>This is a H3 headline</h3>
+      <h4>This is a H4 headline</h4>
+      <p>This is a paragraph, or list, or span, label, etc.</p>
+      <button class="cta">Click Me! <i class="fas fa-long-arrow-alt-right"></i></button>
+    </article>
+
+    <!-- Lists -->
+    <article>
+      <h3>Lists</h3>
+      <ul>
+        <li>This</li>
+        <li>is</li>
+        <li>a</li>
+        <li>list</li>
+        <li><a href="#">This is a link</a></li>
+      </ul>
+    </article>
+
+    <!-- Forms -->
+    <article>
+      <h3>Forms</h3>
+      <form>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" placeholder="First Name">
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Last Name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Please leave a message!"></textarea>
+        <button type="submit" value="Submit">Submit</button>
+      </form>
+    </article>
+
+    <!-- Add To Cart -->
+    <article>
+      <h3>Add To Bag</h3>
+      <button onClick='addCount()'>Add To Bag</button>
+      <div class="cart-container">
+        <p id="counter-circle"></p>
+        <button class="cart-button"><i class="fas fa-shopping-cart fa-3x"></i></button>
+      </div>
+    </article>
+  </section>
+  <script src="https://kit.fontawesome.com/74fdfd1d95.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
